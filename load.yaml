@@ -1,0 +1,18 @@
+overload:
+  enabled: true
+  package: yandextank.plugins.DataUploader
+  token_file: "token.txt"
+
+phantom:
+  address: api.coindesk.com # add :443 port for ssl
+  # ssl: true
+  ammofile: ammo.txt
+  writelog: all
+  load_profile:
+    load_type: rps
+    schedule: line(100, 500, 1m) # const(100, 30s)
+
+console:
+  enabled: true # enable console output
+telegraf:
+  enabled: false # let's disable telegraf monitoring for the first time
